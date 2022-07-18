@@ -1,0 +1,55 @@
+.aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--body-color);
+    border-right: 1px solid rgb(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    width: 110px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.nav_link {
+   font-size: 1.5rem;
+   color: var(--tittle-color);
+   font-weight: var(--font-bold);
+   transition: 0.3s;
+}
+
+.nav__link:hover {
+    color: hsl(43, 100%, 68%);
+}
+
+.copyright {
+   color: hsl(245, 15%, 65%);
+   font-size: var(--small-font-size);
+   transform: rotate(-180deg);
+   writing-mode: vertical-rl;
+}
+
+/* =============== Responsive Typography (MEDIUM DEVICES) ============ */
+@media screen and (max-width: 1024px) {
+    :root {
+      --h1-font-size: 1.75rem;
+      --h2-font-size: 1.25rem;
+      --h3-font-size: 1rem;
+      --normal-font-size: 0.938rem;
+      --small-font-size: 0.813rem;
+      --smaller-font-size: 0.75rem;
+    }
+  }
+
+  /* ====================== MEDIA QUERIES (SMALL DEVICES) ================================ */
+@media screen and (max-width: 600px) {
+    
+}
