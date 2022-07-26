@@ -55,7 +55,6 @@
     top: 1.4rem;
     color: #fff;
     background-color: #6c6ce5;
-    /* transform: rotate(-90deg); */
     padding: 0.25rem 0.75rem;
     font-size: var(--small-font-size);
     border-top-right-radius: var(--border-radius);
@@ -63,15 +62,26 @@
     border-top-left-radius: 0;
 }
 
-/* =============== Responsive Typography ============ */
 @media screen and (max-width: 1024px) {
-    :root {
-      --h1-font-size: 1.75rem;
-      --h2-font-size: 1.25rem;
-      --h3-font-size: 1rem;
-      --normal-font-size: 0.938rem;
-      --small-font-size: 0.813rem;
-      --smaller-font-size: 0.75rem;
+    .pricing__container {
+      grid-template-columns: repeat(2, 330px);
+      justify-content: center;
+      gap: 1.875rem;
     }
-  }
 
+    .pricing__item.best {
+      padding: 1.875rem 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pricing__container {
+      grid-template-columns: 310px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .pricing__container {
+      grid-template-columns: 1fr;
+    }
+}

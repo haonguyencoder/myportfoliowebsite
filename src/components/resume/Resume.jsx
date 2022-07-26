@@ -2,11 +2,16 @@ import React from "react";
 import "./resume.css";
 import Data from "./Data";
 import Card from "./Card";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const Resume = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <section className="resume container section" id="resume">
-      <h2 className="resume__title">Experience</h2>
+      <h2 style={{color: darkMode? 'white': ''}} className="resume__title">Experience</h2>
 
       <div className="resume__container grid">
         <div className="timeline grid">

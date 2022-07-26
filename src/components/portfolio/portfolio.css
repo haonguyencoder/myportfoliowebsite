@@ -1,6 +1,7 @@
 .work__filters {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     column-gap: 1.875rem;
     margin-bottom: 2.5rem;
 }
@@ -96,14 +97,30 @@
     opacity: 0.9;
 }
 
-/* =============== Responsive Typography ============ */
 @media screen and (max-width: 1024px) {
-    :root {
-      --h1-font-size: 1.75rem;
-      --h2-font-size: 1.25rem;
-      --h3-font-size: 1rem;
-      --normal-font-size: 0.938rem;
-      --small-font-size: 0.813rem;
-      --smaller-font-size: 0.75rem;
+    .work__filters {
+        justify-content: center;
     }
-  }
+    
+    .work__container {
+      grid-template-columns: repeat(2, 330px);
+      justify-content: center;
+      row-gap: 1.875rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work__container {
+      grid-template-columns: 310px;
+    }
+
+    .work__filters {
+        row-gap: 0.25rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .work__container {
+      grid-template-columns: 1fr;
+    }
+}

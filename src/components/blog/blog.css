@@ -59,14 +59,22 @@
     font-weight: var(--font-bold);
 }
 
-/* =============== Responsive Typography ============ */
 @media screen and (max-width: 1024px) {
-    :root {
-      --h1-font-size: 1.75rem;
-      --h2-font-size: 1.25rem;
-      --h3-font-size: 1rem;
-      --normal-font-size: 0.938rem;
-      --small-font-size: 0.813rem;
-      --smaller-font-size: 0.75rem;
+    .blog__container {
+      grid-template-columns: repeat(2, 330px);
+      justify-content: center;
+      gap: 1.875rem;
     }
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .blog__container {
+      grid-template-columns: 310px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .blog__container {
+      grid-template-columns: 1fr;
+    }
+}

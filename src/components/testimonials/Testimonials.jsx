@@ -2,6 +2,8 @@ import React from "react";
 import "./testimonials.css";
 import Image1 from "../../assets/avatar-1.svg";
 import Image3 from "../../assets/avatar-3.svg";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 // import Swiper core and required modules
 import { Pagination } from "swiper";
 
@@ -31,9 +33,11 @@ const data = [
 ];
 
 const Testimonials = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <section className="testimonials container section">
-      <h2 className="section__title">Clients & Reviews</h2>
+      <h2 style={{color: darkMode? 'white': ''}} className="section__title">Clients & Reviews</h2>
 
       <Swiper
         className="testimonials__container grid"
@@ -51,9 +55,9 @@ const Testimonials = () => {
               <div className="thumb">
                 <img src={image} alt="" />
               </div>
-              <h3 className="testimonials__title">{title}</h3>
-              <span className="subtitle">{subtitle}</span>
-              <div className="comment">{comment}</div>
+              <h3 style={{color: darkMode? 'blue': ''}} className="testimonials__title">{title}</h3>
+              <span style={{color: darkMode? 'white': ''}} className="subtitle">{subtitle}</span>
+              <div style={{color: darkMode? '#333': ''}} className="comment">{comment}</div>
             </SwiperSlide>
           );
         })}

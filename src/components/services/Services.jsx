@@ -3,8 +3,11 @@ import "./services.css"
 import Image1 from "../../assets/service-1.svg"
 import Image2 from "../../assets/service-2.svg"
 import Image3 from "../../assets/service-3.svg"
+import { themeContext } from '../../Context'
+import { useContext as UseContext } from "react";
 
 const data = [
+  
   {
     id: 1,
     image: Image1,
@@ -29,9 +32,11 @@ const data = [
 ];
 
 const services = () => {
+  const theme = UseContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <section className="services container section" id='services'>
-      <h2 className="section__title">Services</h2>
+      <h2 style={{color: darkMode? 'white': ''}} className="section__title">Services</h2>
 
       <div className="services__container grid">
         {data.map(({id, image, title, description}) => {
@@ -40,7 +45,7 @@ const services = () => {
               <img src={image} alt="" className="services__img" />
 
               <h3 className="services__title">{title}</h3>
-              <p className="services__description">{description}</p>
+              <p style={{color: darkMode? 'white': ''}} className="services__description">{description}</p>
             </div>
           )
         })} 

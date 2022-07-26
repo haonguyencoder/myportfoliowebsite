@@ -48,14 +48,30 @@
     resize: none;
 }
 
-/* =============== Responsive Typography ============ */
 @media screen and (max-width: 1024px) {
-    :root {
-      --h1-font-size: 1.75rem;
-      --h2-font-size: 1.25rem;
-      --h3-font-size: 1rem;
-      --normal-font-size: 0.938rem;
-      --small-font-size: 0.813rem;
-      --smaller-font-size: 0.75rem;
+    .contact__container {
+      grid-template-columns: 300px 360px;
+      justify-content: center;
     }
-  }
+
+    .contact__form-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__container {
+      grid-template-columns: 310px;
+      row-gap: 1.875rem;
+    }
+
+    .contact__info {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .contact__container {
+      grid-template-columns: 1fr;
+    }
+}

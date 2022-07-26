@@ -10,11 +10,21 @@ import Pricing from './components/pricing/Pricing';
 import Testimonials from './components/testimonials/Testimonials';
 import Blog from './components/blog/Blog'
 import Contact from './components/contact/Contact'
+import { themeContext } from './Context'
+import { useContext } from 'react';
 
 
 const App = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <>
+    <div className="App"
+    style={{
+      background : darkMode? '#46045e': '',
+      color : darkMode? 'white': ''
+    }}
+
+    >
     <Sidebar />
     <main className='main'>
     <Home />
@@ -27,7 +37,7 @@ const App = () => {
     <Blog />
     <Contact />
     </main>
-    </>
+    </div>
   )
 }
     
