@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import "./portfolio.css"
-import Menu from './Menu'
+import "./portfolio.css";
+import Menu from './Menu';
 import { themeContext } from "../../Context";
 import { useContext } from "react";
 
