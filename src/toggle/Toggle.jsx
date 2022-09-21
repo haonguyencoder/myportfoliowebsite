@@ -20,7 +20,7 @@ const Toggle = () => {
       <FiSun />
       <BsFillMoonStarsFill />
       <div className="t-button"
-          style ={darkMode? {top: '2px'} : {bottom: '2px'}}
+          style ={darkMode? {left: '2px'} : {right: '2px'}}
       >
       </div>
     </div>
