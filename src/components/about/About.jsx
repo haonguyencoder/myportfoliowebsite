@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 import Image from "../../assets/avatar-2.svg";
 import AboutBox from "./AboutBox";
-import CV from "../../assets/CV_Nguyen_Hong_Hao_Frontend_Developer.pdf";
+import CV from "../../assets/HaoNguyen_FE.pdf";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
 
